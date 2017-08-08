@@ -1,0 +1,11 @@
+D:\MTG collector\MtgCollector\Core\bin\Debug\Core.dll
+D:\MTG collector\MtgCollector\Core\bin\Debug\Core.pdb
+D:\MTG collector\MtgCollector\Core\bin\Debug\AutoMapper.dll
+D:\MTG collector\MtgCollector\Core\bin\Debug\DAL.dll
+D:\MTG collector\MtgCollector\Core\bin\Debug\EntityFramework.dll
+D:\MTG collector\MtgCollector\Core\bin\Debug\DAL.pdb
+D:\MTG collector\MtgCollector\Core\bin\Debug\AutoMapper.xml
+D:\MTG collector\MtgCollector\Core\bin\Debug\EntityFramework.xml
+D:\MTG collector\MtgCollector\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+D:\MTG collector\MtgCollector\Core\obj\Debug\Core.dll
+D:\MTG collector\MtgCollector\Core\obj\Debug\Core.pdb

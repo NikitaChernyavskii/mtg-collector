@@ -39,3 +39,13 @@ D:\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.WebHost.xml
 D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
 D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.dll
 D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.pdb
+D:\MTG collector\MtgCollector\WebApi\bin\EntityFramework.dll
+D:\MTG collector\MtgCollector\WebApi\bin\EntityFramework.SqlServer.dll
+D:\MTG collector\MtgCollector\WebApi\bin\EntityFramework.xml
+D:\MTG collector\MtgCollector\WebApi\bin\EntityFramework.SqlServer.xml
+D:\MTG collector\MtgCollector\WebApi\bin\AutoMapper.dll
+D:\MTG collector\MtgCollector\WebApi\bin\Core.dll
+D:\MTG collector\MtgCollector\WebApi\bin\DAL.dll
+D:\MTG collector\MtgCollector\WebApi\bin\Core.pdb
+D:\MTG collector\MtgCollector\WebApi\bin\AutoMapper.xml
+D:\MTG collector\MtgCollector\WebApi\bin\DAL.pdb
