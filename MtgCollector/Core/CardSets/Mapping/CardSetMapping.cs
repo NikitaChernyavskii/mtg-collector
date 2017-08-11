@@ -24,7 +24,7 @@ namespace Core.CardSets.Mapping
 
         public static void Update(this CardSet dbEntity, CardSetModel model)
         {
-            
+            Mapper.Map(model, dbEntity);
         }
     }
 }

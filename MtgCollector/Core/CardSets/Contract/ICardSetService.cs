@@ -9,7 +9,7 @@ namespace Core.CardSets.Contract
 
         void Add(CardSetModel model);
 
-        void Update(CardSetModel model);
+        void Update(int id, CardSetModel model);
 
         void Delete(int id);
     }

@@ -10,7 +10,7 @@ namespace DAL.DataBase.Contract
 
         void Add(TEntity entity);
 
-        void Update( TEntity entity);
+        void Update(TEntity entity);
 
         void Delete(int id);
     }

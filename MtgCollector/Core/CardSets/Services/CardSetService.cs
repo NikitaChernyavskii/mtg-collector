@@ -30,9 +30,12 @@ namespace Core.CardSets.Services
             _repository.Add(model.ToEntity());
         }
 
-        public void Update(CardSetModel model)
+        public void Update(int id, CardSetModel model)
         {
-            _repository.Update(model.ToEntity());
+            CardSet cardSetEntity = _repository.Get().First(e => e.Id == id);
+            cardSetEntity.Update(model);
+
+            _repository.Update(cardSetEntity);
         }
 
         public void Delete(int id)

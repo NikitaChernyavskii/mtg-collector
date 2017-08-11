@@ -37,7 +37,7 @@ namespace WebApi.Controllers
         [Route("")]
         public void Update(int id, CardSetModel model)
         {
-            _cardSetService.Update(model);
+            _cardSetService.Update(id, model);
         }
 
         [HttpDelete]
