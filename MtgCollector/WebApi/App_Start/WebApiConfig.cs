@@ -1,4 +1,7 @@
 ﻿using System.Web.Http;
+using Core.Infrastructure;
+using DAL.Infrastructure;
+using Ninject;
 using WebApi.Infrastructure;
 
 namespace WebApi
@@ -7,9 +10,20 @@ namespace WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            InitializeNinject();
+            RegisterRoutes(config);
+            MappingRegisterService.RegisterMappings();
+        }
 
-            // Web API routes
+        private static void InitializeNinject()
+        {
+            IKernel kernel = NinjectWebCommon.Bootstrapper.Kernel;
+            DalNinjectRegisterBindingService.Register(kernel);
+            CoreNinjectRegisterBindingService.Register(kernel);
+        }
+
+        private static void RegisterRoutes(HttpConfiguration config)
+        {
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -17,8 +31,6 @@ namespace WebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
-            MappingRegisterService.RegisterMappings();
         }
     }
 }

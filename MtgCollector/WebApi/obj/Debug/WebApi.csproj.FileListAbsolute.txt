@@ -49,3 +49,13 @@ D:\MTG collector\MtgCollector\WebApi\bin\DAL.dll
 D:\MTG collector\MtgCollector\WebApi\bin\Core.pdb
 D:\MTG collector\MtgCollector\WebApi\bin\AutoMapper.xml
 D:\MTG collector\MtgCollector\WebApi\bin\DAL.pdb
+D:\MTG collector\MtgCollector\WebApi\bin\Microsoft.Web.Infrastructure.dll
+D:\MTG collector\MtgCollector\WebApi\bin\Ninject.dll
+D:\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.Common.dll
+D:\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.WebApi.dll
+D:\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.WebApi.WebHost.dll
+D:\MTG collector\MtgCollector\WebApi\bin\WebActivatorEx.dll
+D:\MTG collector\MtgCollector\WebApi\bin\Ninject.xml
+D:\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.Common.xml
+D:\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.WebApi.xml
+D:\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.WebApi.WebHost.xml

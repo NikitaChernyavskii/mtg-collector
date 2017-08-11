@@ -3,22 +3,16 @@ using System.Linq;
 using Core.CardSets.Contract;
 using Core.CardSets.Mapping;
 using Core.CardSets.Models;
-using DAL.DataBase;
 using DAL.DataBase.Contract;
 using DAL.Entities;
+using Ninject;
 
 namespace Core.CardSets.Services
 {
     public class CardSetService : ICardSetService
     {
-        private IRepository<CardSet> _repository;
-
-        public CardSetService(/*IRepository<CardSet> repository*/)
-        {
-            // TODO: inject
-            _repository = new Repository<CardSet>();
-        }
-
+        [Inject]
+        private IRepository<CardSet> _repository { get; set; }
 
         public List<CardSetView> Get()
         {

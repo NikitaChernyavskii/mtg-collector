@@ -3,19 +3,15 @@ using System.Web.Http;
 using Core.CardSets.Contract;
 using Core.CardSets.Models;
 using Core.CardSets.Services;
+using Ninject;
 
 namespace WebApi.Controllers
 {
     [RoutePrefix("CardSet")]
     public class CardSetController : ApiController
     {
-        private ICardSetService _cardSetService;
-
-        public CardSetController(/*ICardSetService cardSetService*/)
-        {
-            // TODO: inject
-            _cardSetService = new CardSetService();
-        }
+        [Inject]
+        private ICardSetService _cardSetService { get; set; }
 
         [HttpGet]
         [Route("")]
