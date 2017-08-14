@@ -1,10 +1,12 @@
 CREATE TABLE [Card]
 (
 	Id INT IDENTITY(1, 1) NOT NULL,
-	CadrSetId INT NOT NULL,
+	CardSetId INT NOT NULL,
+	CardRarityId INT NOT NULL,
 	Name NVARCHAR(150) NOT NULL,
 	ImageName NVARCHAR(150) NULL
 
 	CONSTRAINT pk_Card_Id PRIMARY KEY (Id),
-	CONSTRAINT fk_Card_CardSetId FOREIGN KEY (CadrSetId) REFERENCES dbo.CardSet (Id)
+	CONSTRAINT fk_Card_CardSetId FOREIGN KEY (CardSetId) REFERENCES dbo.CardSet (Id),
+	CONSTRAINT fk_Card_CardRarityId FOREIGN KEY (CardrarityId) REFERENCES dbo.CardRarity (Id)
 )

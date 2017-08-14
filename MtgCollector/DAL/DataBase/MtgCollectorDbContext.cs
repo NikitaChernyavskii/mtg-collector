@@ -9,7 +9,7 @@ namespace DAL.DataBase
         public MtgCollectorDbContext()
             : base("MtgCollector")
         {
-
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         #region DbSets

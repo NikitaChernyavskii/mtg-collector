@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Linq.Expressions;
 using DAL.DataBase.Contract;
 using DAL.DataBase.Models;
 
@@ -10,11 +11,17 @@ namespace DAL.DataBase
     public class Repository<TEntity> : IRepository<TEntity>
         where TEntity : class, IEntity
     {
-        public List<TEntity> Get()
+        public List<TEntity> Get(params Expression<Func<TEntity, object>>[] includeProperties)
         {
             using (var context = new MtgCollectorDbContext())
             {
-                return context.Set<TEntity>().ToList();
+                IQueryable<TEntity> entities = context.Set<TEntity>();
+                foreach (var includeProperty in includeProperties)
+                {
+                    entities = entities.Include(includeProperty);
+                }
+
+                return entities.ToList();
             }
         }
 

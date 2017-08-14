@@ -34,11 +34,20 @@
       <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,17 +57,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardRarities\Mapping\CardRarityMapping.cs" />
+    <Compile Include="CardRarities\Models\CardRarityView.cs" />
     <Compile Include="CardSets\Contract\ICardSetService.cs" />
     <Compile Include="CardSets\Mapping\CardSetMapping.cs" />
     <Compile Include="CardSets\Models\CardSetModel.cs" />
     <Compile Include="CardSets\Models\CardSetView.cs" />
     <Compile Include="CardSets\Services\CardSetService.cs" />
+    <Compile Include="Cards\Contract\ICardService.cs" />
+    <Compile Include="Cards\Mapping\CardMapping.cs" />
+    <Compile Include="Cards\Models\CardModel.cs" />
+    <Compile Include="Cards\Models\CardView.cs" />
+    <Compile Include="Cards\Services\CardService.cs" />
+    <Compile Include="Infrastructure\AutomapperExtensions.cs" />
     <Compile Include="Infrastructure\CoreMappingRegisterService.cs" />
     <Compile Include="Infrastructure\CoreNinjectRegisterBindingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

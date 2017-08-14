@@ -11,3 +11,6 @@ D:\MTG collector\MtgCollector\Core\obj\Debug\Core.dll
 D:\MTG collector\MtgCollector\Core\obj\Debug\Core.pdb
 D:\MTG collector\MtgCollector\Core\bin\Debug\Ninject.dll
 D:\MTG collector\MtgCollector\Core\bin\Debug\Ninject.xml
+D:\MTG collector\MtgCollector\Core\bin\Debug\Core.dll.config
+D:\MTG collector\MtgCollector\Core\bin\Debug\EntityFramework.SqlServer.dll
+D:\MTG collector\MtgCollector\Core\bin\Debug\EntityFramework.SqlServer.xml

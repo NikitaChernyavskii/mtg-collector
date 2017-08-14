@@ -58,6 +58,7 @@
     <Compile Include="DataBase\MtgCollectorDbContext.cs" />
     <Compile Include="DataBase\Repository.cs" />
     <Compile Include="Entities\Card.cs" />
+    <Compile Include="Entities\CardRarity.cs" />
     <Compile Include="Entities\CardSet.cs" />
     <Compile Include="Infrastructure\DalNinjectRegisterBindingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

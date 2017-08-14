@@ -2,7 +2,6 @@
 using System.Web.Http;
 using Core.CardSets.Contract;
 using Core.CardSets.Models;
-using Core.CardSets.Services;
 using Ninject;
 
 namespace WebApi.Controllers
@@ -11,13 +10,13 @@ namespace WebApi.Controllers
     public class CardSetController : ApiController
     {
         [Inject]
-        private ICardSetService _cardSetService { get; set; }
+        private ICardSetService CardSetService { get; set; }
 
         [HttpGet]
         [Route("")]
         public List<CardSetView> Get()
         {
-            List<CardSetView> cardSets = _cardSetService.Get();
+            List<CardSetView> cardSets = CardSetService.Get();
 
             return cardSets;
         }
@@ -26,21 +25,21 @@ namespace WebApi.Controllers
         [Route("")]
         public void Add(CardSetModel model)
         {
-            _cardSetService.Add(model);
+            CardSetService.Add(model);
         }
 
         [HttpPut]
         [Route("")]
         public void Update(int id, CardSetModel model)
         {
-            _cardSetService.Update(id, model);
+            CardSetService.Update(id, model);
         }
 
         [HttpDelete]
         [Route("")]
         public void Delete(int id)
         {
-            _cardSetService.Delete(id);
+            CardSetService.Delete(id);
         }
     }
 }

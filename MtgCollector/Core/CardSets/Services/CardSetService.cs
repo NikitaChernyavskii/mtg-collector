@@ -16,7 +16,7 @@ namespace Core.CardSets.Services
 
         public List<CardSetView> Get()
         {
-            return _repository.Get().Select(c => c.ToView()).ToList();
+            return _repository.Get().ToList().Select(c => c.ToView()).ToList();
         }
 
         public void Add(CardSetModel model)
