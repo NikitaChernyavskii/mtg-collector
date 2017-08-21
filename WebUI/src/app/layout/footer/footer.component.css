@@ -1,0 +1,15 @@
+#footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 20px;
+    border-top: 2px solid grey;
+}
+
+#signature {
+    color: #993333;
+}
