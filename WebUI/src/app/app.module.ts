@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MainComponent } from './layout/main/main.component';
+import {HomeComponent} from './home/home.component';
+
 import { RoutingModule } from './app.route';
 
 
@@ -11,7 +13,8 @@ import { RoutingModule } from './app.route';
   declarations: [
     MainComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
