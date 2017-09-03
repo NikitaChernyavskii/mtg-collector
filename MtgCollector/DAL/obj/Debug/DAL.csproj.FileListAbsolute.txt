@@ -10,3 +10,15 @@ D:\MTG collector\MtgCollector\DAL\obj\Debug\DAL.dll
 D:\MTG collector\MtgCollector\DAL\obj\Debug\DAL.pdb
 D:\MTG collector\MtgCollector\DAL\bin\Debug\Ninject.dll
 D:\MTG collector\MtgCollector\DAL\bin\Debug\Ninject.xml
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\DAL.dll.config
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\DAL.dll
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\DAL.pdb
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\EntityFramework.dll
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\Ninject.dll
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\EntityFramework.xml
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\workspace\MTG collector\MtgCollector\DAL\bin\Debug\Ninject.xml
+E:\workspace\MTG collector\MtgCollector\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\workspace\MTG collector\MtgCollector\DAL\obj\Debug\DAL.dll
+E:\workspace\MTG collector\MtgCollector\DAL\obj\Debug\DAL.pdb
