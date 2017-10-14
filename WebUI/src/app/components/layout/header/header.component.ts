@@ -10,6 +10,7 @@ import { CardSet } from '../../../models';
 export class HeaderComponent implements OnInit  {
 
   cardSets: Array<CardSet>;
+  selectedCardSet: CardSet = null;
 
   ngOnInit() {
     // HACK: move to http service
@@ -19,5 +20,13 @@ export class HeaderComponent implements OnInit  {
   }
 
   homeClick(): void {
+  }
+
+  selectCardSetClick(cardSet: CardSet) {
+    this.selectedCardSet = cardSet;
+  }
+
+  get getCardSetDropDownCurrentValue(): string {
+    return this.selectedCardSet ? this.selectedCardSet.name : 'select set';
   }
 }

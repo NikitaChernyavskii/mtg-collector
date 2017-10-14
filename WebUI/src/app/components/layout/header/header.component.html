@@ -1,19 +1,19 @@
-<div id="header">
-  <div id="header-menu">
-    <div id="header-menu-wrapper-left">
+<div class="header">
+  <div class="header-menu">
+    <div class="header-menu-wrapper-left">
       <div class="header-menu-item" (click)="homeClick()"><span>Home</span></div>
       <div class="header-menu-item">
         <div ngbDropdown>
-          <button id="card-set-dropdown-toggle" ngbDropdownToggle>sets</button>
+          <button class="card-set-dropdown-toggle card-set-dropdown" ngbDropdownToggle>{{getCardSetDropDownCurrentValue}}</button>
           <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="card-set-dropdown-toggle">
-            <button class="dropdown-item" *ngFor="let set of cardSets">
+            <button class="dropdown-item card-set-dropdown-item" *ngFor="let set of cardSets" (click)="selectCardSetClick(set)">
               {{set.name}}
             </button>
           </div>
         </div>
       </div>
     </div>
-    <div id="header-menu-wrapper-right">
+    <div class="header-menu-wrapper-right">
       <div class="header-menu-item"><span>Login</span></div>
     </div>
   </div>
