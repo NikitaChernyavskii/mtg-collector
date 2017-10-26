@@ -1,4 +1,4 @@
-export class CardSet {
+export class CardSetView {
     id: number;
     name: string;
 }

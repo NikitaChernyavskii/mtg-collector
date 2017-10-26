@@ -1,10 +1,11 @@
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
+import { Response } from '@angular/http';
 
 export abstract class BaseService {
 
-    constructor(private router: Router) {
+    constructor(protected router: Router) {
 
     }
 
@@ -19,7 +20,7 @@ export abstract class BaseService {
     }
 
     private handleError(error: Response): ErrorObservable {
-        let body = error.json();
+        const body = error.json();
         console.error(body);
 
         return Observable.throw(body);
