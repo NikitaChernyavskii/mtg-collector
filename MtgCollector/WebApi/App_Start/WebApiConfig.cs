@@ -12,6 +12,7 @@ namespace WebApi
         {
             InitializeNinject();
             RegisterRoutes(config);
+            config.EnableCors();
             MappingRegisterService.RegisterMappings();
         }
 

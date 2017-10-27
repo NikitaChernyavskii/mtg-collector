@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Core.CardSets.Contract;
 using Core.CardSets.Models;
 using Ninject;
@@ -7,6 +8,7 @@ using Ninject;
 namespace WebApi.Controllers
 {
     [RoutePrefix("CardSet")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CardSetController : ApiController
     {
         [Inject]

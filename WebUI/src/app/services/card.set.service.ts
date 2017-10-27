@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 
 import { CardSetView } from '../models/card.set.view';
 
+@Injectable()
 export class CardSetService extends BaseService {
 
   constructor(private http: Http, protected router: Router) {
@@ -15,6 +16,6 @@ export class CardSetService extends BaseService {
 
   public getCardSets(): Observable<CardSetView[]> {
     return this.httpCall<CardSetView[]>(() => this.http.get('http://localhost:58157/cardset'));
-    // TODO: ,ove localhost to separate variable/config
+    // TODO: move localhost to separate variable/config
   }
 }

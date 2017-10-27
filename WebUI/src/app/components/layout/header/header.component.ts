@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CardSet } from '../../../models';
+import { CardSetView } from '../../../models';
+import { CardSetService } from '../../../services/card.set.service';
 
 @Component({
   selector: 'app-header',
@@ -7,26 +8,38 @@ import { CardSet } from '../../../models';
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent implements OnInit  {
+export class HeaderComponent implements OnInit {
 
-  cardSets: Array<CardSet>;
-  selectedCardSet: CardSet = null;
+  cardSets: Array<CardSetView>;
+  selectedCardSet: CardSetView = null;
+
+  constructor(private cardSetService: CardSetService) {
+
+  }
 
   ngOnInit() {
-    // HACK: move to http service
-    this.cardSets = new Array<CardSet>();
-    this.cardSets.push({ id: 1, name: 'Shadows over Innistrad' });
-    this.cardSets.push({ id: 2, name: 'Eldritch Moon' });
+    this.loadCardSets();
   }
 
   homeClick(): void {
   }
 
-  selectCardSetClick(cardSet: CardSet) {
+  selectCardSetClick(cardSet: CardSetView) {
     this.selectedCardSet = cardSet;
   }
 
   get getCardSetDropDownCurrentValue(): string {
     return this.selectedCardSet ? this.selectedCardSet.name : 'select set';
+  }
+
+  loadCardSets(): void {
+    this.cardSetService.getCardSets().subscribe(sets => {
+      this.cardSets = sets;
+    });
+  }
+
+  test(): CardSetView[] {
+    debugger
+    return this.cardSets;
   }
 }

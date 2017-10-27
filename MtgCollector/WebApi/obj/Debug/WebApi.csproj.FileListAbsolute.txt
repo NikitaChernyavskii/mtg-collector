@@ -122,3 +122,9 @@ E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.WebHost.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
 E:\workspace\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.dll
 E:\workspace\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.pdb
+D:\MTG collector\MtgCollector\WebApi\bin\System.Web.Cors.dll
+D:\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.dll
+D:\MTG collector\MtgCollector\WebApi\bin\Core.dll.config
+D:\MTG collector\MtgCollector\WebApi\bin\DAL.dll.config
+D:\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.xml
+D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
