@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 import { CardSetView } from '../../../models';
 import { CardSetService } from '../../../services/card.set.service';
 
@@ -13,16 +16,15 @@ export class HeaderComponent implements OnInit {
   cardSets: Array<CardSetView>;
   selectedCardSet: CardSetView = null;
 
-  constructor(private cardSetService: CardSetService) {
-
+  constructor(private cardSetService: CardSetService, private router: Router) {
   }
 
   ngOnInit() {
-    debugger
     this.loadCardSets();
   }
 
   homeClick(): void {
+    this.router.navigateByUrl('home');
   }
 
   selectCardSetClick(cardSet: CardSetView) {
@@ -35,7 +37,6 @@ export class HeaderComponent implements OnInit {
 
   loadCardSets(): void {
     this.cardSetService.getCardSets().subscribe(sets => {
-      debugger
       this.cardSets = sets;
     });
   }

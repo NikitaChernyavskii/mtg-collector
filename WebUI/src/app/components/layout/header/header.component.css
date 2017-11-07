@@ -21,12 +21,20 @@
 
 .header-menu-item {
     display: inline-block;
-    cursor: pointer;
     color: #993333;
+    padding: 0 5px 0 0;
 }
 
 .card-set-dropdown::-ms-expand {
     display: none;
+}
+
+.drop-down {
+    display: inline-block;
+}
+
+.card-set-dropdown, .card-set-dropdown-item {
+    cursor: pointer;
 }
 
 .card-set-dropdown {
@@ -58,7 +66,11 @@
     padding: 0;
 }
 
-.header-menu-item>span:hover {
+.header-menu-item-ref {
+    cursor: pointer;
+}
+
+.header-menu-item-ref>span:hover {
     color: black;
     text-shadow: 1px 0.1px #661515;
 }
