@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   homeClick(): void {
-    this.router.navigateByUrl('home');
+    this.router.navigateByUrl('');
   }
 
   selectCardSetClick(cardSet: CardSetView) {
