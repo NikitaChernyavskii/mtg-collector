@@ -7,7 +7,7 @@
           <button class="card-set-dropdown-toggle card-set-dropdown" ngbDropdownToggle>{{getCardSetDropDownCurrentValue}}</button>
           <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="card-set-dropdown-toggle">
             <button class="dropdown-item card-set-dropdown-item" *ngFor="let set of cardSets" (click)="selectCardSetClick(set)">
-              {{set.Name}}
+              {{set.name}}
             </button>
           </div>
         </div>

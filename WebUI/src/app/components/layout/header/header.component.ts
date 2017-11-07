@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    debugger
     this.loadCardSets();
   }
 
@@ -34,12 +35,8 @@ export class HeaderComponent implements OnInit {
 
   loadCardSets(): void {
     this.cardSetService.getCardSets().subscribe(sets => {
+      debugger
       this.cardSets = sets;
     });
-  }
-
-  test(): CardSetView[] {
-    debugger
-    return this.cardSets;
   }
 }

@@ -128,3 +128,6 @@ D:\MTG collector\MtgCollector\WebApi\bin\Core.dll.config
 D:\MTG collector\MtgCollector\WebApi\bin\DAL.dll.config
 D:\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.xml
 D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Cors.dll
+E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.dll
+E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.xml
