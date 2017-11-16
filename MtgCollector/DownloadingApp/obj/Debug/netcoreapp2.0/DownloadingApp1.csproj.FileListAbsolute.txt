@@ -1,0 +1,12 @@
+D:\MTG collector\MtgCollector\DownloadingApp\bin\Debug\netcoreapp2.0\DownloadingApp1.dll.config
+D:\MTG collector\MtgCollector\DownloadingApp\bin\Debug\netcoreapp2.0\DownloadingApp1.deps.json
+D:\MTG collector\MtgCollector\DownloadingApp\bin\Debug\netcoreapp2.0\DownloadingApp1.runtimeconfig.json
+D:\MTG collector\MtgCollector\DownloadingApp\bin\Debug\netcoreapp2.0\DownloadingApp1.runtimeconfig.dev.json
+D:\MTG collector\MtgCollector\DownloadingApp\bin\Debug\netcoreapp2.0\DownloadingApp1.dll
+D:\MTG collector\MtgCollector\DownloadingApp\bin\Debug\netcoreapp2.0\DownloadingApp1.pdb
+D:\MTG collector\MtgCollector\DownloadingApp\obj\Debug\netcoreapp2.0\DownloadingApp1.csprojResolveAssemblyReference.cache
+D:\MTG collector\MtgCollector\DownloadingApp\obj\Debug\netcoreapp2.0\DownloadingApp1.csproj.CoreCompileInputs.cache
+D:\MTG collector\MtgCollector\DownloadingApp\obj\Debug\netcoreapp2.0\DownloadingApp1.AssemblyInfoInputs.cache
+D:\MTG collector\MtgCollector\DownloadingApp\obj\Debug\netcoreapp2.0\DownloadingApp1.AssemblyInfo.cs
+D:\MTG collector\MtgCollector\DownloadingApp\obj\Debug\netcoreapp2.0\DownloadingApp1.dll
+D:\MTG collector\MtgCollector\DownloadingApp\obj\Debug\netcoreapp2.0\DownloadingApp1.pdb

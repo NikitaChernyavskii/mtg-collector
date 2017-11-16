@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{5C71A332-C54C-4E3C-A6B2-771053BDF836}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{18FE97AA-D7D4-4405-B3B8-7DE336D741B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{97398153-CCD9-4D62-BD6A-0889EE672935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsDownloadApp", "CardsDownloadApp\CardsDownloadApp.csproj", "{DA591C6F-79D4-4A8D-A954-A71A1D2915C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +29,15 @@ Global
 		{97398153-CCD9-4D62-BD6A-0889EE672935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97398153-CCD9-4D62-BD6A-0889EE672935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97398153-CCD9-4D62-BD6A-0889EE672935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA591C6F-79D4-4A8D-A954-A71A1D2915C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA591C6F-79D4-4A8D-A954-A71A1D2915C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA591C6F-79D4-4A8D-A954-A71A1D2915C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA591C6F-79D4-4A8D-A954-A71A1D2915C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62DF469E-978E-4C2A-8178-290D816E63ED}
 	EndGlobalSection
 EndGlobal
