@@ -3,32 +3,57 @@ using System.IO;
 using System.Linq;
 using CardsDownloadApp.Models;
 using CardsDownloadApp.Models.MtgJson;
-using Core.CardSets.Models;
 using Core.CardSets.Services;
 using Newtonsoft.Json;
+using Core.CardSets.Contract;
+using Core.Cards.Services;
+using Core.Cards.Contract;
+using Core.CardSets.Models;
+using CardsDownloadApp.Mapping;
+using Ninject;
 
 namespace CardsDownloadApp.Services
 {
     public class DownloadService
     {
-        private readonly CardSetService _cardSetService = new CardSetService();
-
-        public void DownloadAndMerge()
+        private readonly IKernel _kernel;
+        private readonly ICardSetService _cardSetService;
+        private readonly ICardService _cardService = new CardService();
+        public DownloadService(IKernel kernel)
         {
-            List<MtgJsonSet> sets;
+            _kernel = kernel;
+            _cardSetService = _kernel.Get<ICardSetService>();
+            _cardService = _kernel.Get<ICardService>();
+        }
+
+        public void DownloadNewOnes()
+        {
+            List<MtgJsonSet> mtgJsonSets;
             using (var streamReader = new StreamReader(AppSettings.MtgJsonFile))
             {
                 string json = streamReader.ReadToEnd();
-                sets = JsonConvert.DeserializeObject<List<MtgJsonSet>>(json);
+                mtgJsonSets = JsonConvert.DeserializeObject<List<MtgJsonSet>>(json);
             }
 
-            Dictionary<string, CardSetView> existedSets = _cardSetService.Get().ToDictionary(s => s.Name.ToUpper());
-            foreach (var set in sets)
+            var existedSets = new HashSet<string>(_cardSetService.Get().Select(s => s.Name.ToUpper()));
+            List<CardSetModel> setModels = new List<CardSetModel>();
+            foreach (var mtgJsonSet in mtgJsonSets)
             {
-                if (existedSets.ContainsKey(set.Name.ToUpper()))
+                if (existedSets.Contains(mtgJsonSet.Name.ToUpper()))
                 {
-                    
+                    continue;
                 }
+                setModels.Add(mtgJsonSet.ToModel());
+            }
+            AddCardSetsToDb(setModels);
+        }
+
+        private void AddCardSetsToDb(List<CardSetModel> setModels)
+        {
+            // TODO: think about transaction to prevent creation of a lot of contexts
+            foreach(var setModel in setModels)
+            {
+                _cardSetService.Add(setModel);
             }
         }
     }

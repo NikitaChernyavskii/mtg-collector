@@ -1,4 +1,9 @@
-﻿using CardsDownloadApp.Services;
+﻿using AutoMapper;
+using CardsDownloadApp.Services;
+using Core.Infrastructure;
+using DAL.Infrastructure;
+using Ninject;
+using WebApi;
 
 namespace CardsDownloadApp
 {
@@ -6,8 +11,21 @@ namespace CardsDownloadApp
     {
         static void Main(string[] args)
         {
-            var test = new DownloadService();
-            test.DownloadAndMerge();
+            // HACK. DO NOT USE REF TO WEBVB API
+            IKernel kernel = NinjectWebCommon.CreateKernel();
+            DalNinjectRegisterBindingService.Register(kernel);
+            CoreNinjectRegisterBindingService.Register(kernel);
+
+
+
+            Mapper.Initialize(config =>
+            {
+                CoreMappingRegisterService.Register(config);
+            });
+
+
+            var test = new DownloadService(kernel);
+            test.DownloadNewOnes();
         }
     }
 }
