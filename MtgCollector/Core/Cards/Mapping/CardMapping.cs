@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Core.CardRarities.Models;
+//using Core.CardRarities.Models;
 using Core.Cards.Models;
 using Core.CardSets.Models;
 using Core.Infrastructure;
@@ -12,11 +12,11 @@ namespace Core.Cards.Mapping
         public static void Register(IMapperConfigurationExpression config)
         {
             config.CreateMap<Card, CardView>()
-                .ForMember(c => c.CardSet, expression => expression.MapFrom(src => Mapper.Map<CardSet, CardSetView>(src.CardSet)))
-                .ForMember(c => c.CardRarity, expression => expression.MapFrom(src => Mapper.Map<CardRarity, CardRarityView>(src.CardRarity)));
+                .ForMember(c => c.CardSet, expression => expression.MapFrom(src => Mapper.Map<CardSet, CardSetView>(src.CardSet)));
+            //.ForMember(c => c.CardRarity, expression => expression.MapFrom(src => Mapper.Map<CardRarity, CardRarityView>(src.CardRarity)));
             config.CreateMap<CardModel, Card>()
-                .Ignore(c => c.CardSet)
-                .Ignore(c => c.CardRarity);
+                .Ignore(c => c.CardSet);
+                //.Ignore(c => c.CardRarity);
         }
 
         public static CardView ToView(this Card entity)

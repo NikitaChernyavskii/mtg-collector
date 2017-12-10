@@ -1,3 +1,4 @@
+E:\workspace\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\ApplicationInsights.config
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\roslyn\csc.exe
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -34,6 +35,8 @@ E:\workspace\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.Common.dll
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.WebApi.dll
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.WebApi.WebHost.dll
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Net.Http.Formatting.dll
+E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Cors.dll
+E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.dll
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.dll
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.WebHost.dll
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\WebActivatorEx.dll
@@ -50,17 +53,14 @@ E:\workspace\MTG collector\MtgCollector\WebApi\bin\Microsoft.AI.Web.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Microsoft.AI.WindowsServer.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Microsoft.ApplicationInsights.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\workspace\MTG collector\MtgCollector\WebApi\bin\Newtonsoft.Json.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Ninject.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.Common.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.WebApi.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\Ninject.Web.WebApi.WebHost.xml
-E:\workspace\MTG collector\MtgCollector\WebApi\bin\Newtonsoft.Json.xml
+E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Net.Http.Formatting.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.xml
 E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.WebHost.xml
-E:\workspace\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
 E:\workspace\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.dll
 E:\workspace\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.pdb
-E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Cors.dll
-E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.dll
-E:\workspace\MTG collector\MtgCollector\WebApi\bin\System.Web.Http.Cors.xml

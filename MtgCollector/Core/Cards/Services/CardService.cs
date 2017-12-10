@@ -18,7 +18,8 @@ namespace Core.Cards.Services
         public List<CardView> Get()
         {
             List<CardView> cards = CardRepository
-                .Get(c => c.CardSet, c => c.CardRarity)
+                //.Get(c => c.CardSet, c => c.CardRarity)
+                .Get(c => c.CardSet)
                 .Select(c => c.ToView())
                 .ToList();
 
