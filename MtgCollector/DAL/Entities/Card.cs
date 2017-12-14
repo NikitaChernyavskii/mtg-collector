@@ -1,22 +1,24 @@
-﻿using DAL.DataBase.Models;
+﻿using System;
+using DAL.DataBase.Models;
 
 namespace DAL.Entities
 {
     public class Card : IEntity
     {
-        public int Id { get; set; }
-        public int CardSetId { get; set; }
+        public Guid Id { get; set; }
+        public string MtgJsonId { get; set; }
+        public Guid CardSetId { get; set; }
         public string Layout { get; set; }
         public string Name { get; set; }
-        public string[] Names { get; set; }
+        public string Names { get; set; }
         public string ManaCost { get; set; }
-        public float Cmc { get; set; }
-        public string[] Colors { get; set; }
-        public string[] ColorIdentity { get; set; }
+        public double Cmc { get; set; }
+        public string Colors { get; set; }
+        public string ColorIdentity { get; set; }
         public string Type { get; set; }
-        public string[] Supertypes { get; set; }
-        public string[] Types { get; set; }
-        public string[] Subtypes { get; set; }
+        public string Supertypes { get; set; }
+        public string Types { get; set; }
+        public string Subtypes { get; set; }
         public string Rarity { get; set; }
         public string Text { get; set; }
         public string Flavor { get; set; }
@@ -26,7 +28,7 @@ namespace DAL.Entities
         public string Toughness { get; set; }
         public int? Loyalty { get; set; }
         public int Multiverseid { get; set; }
-        public int[] Variations { get; set; }
+        public string Variations { get; set; }
         public string ImageName { get; set; }
         public string Watermark { get; set; }
         public string Border { get; set; }

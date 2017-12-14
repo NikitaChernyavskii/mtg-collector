@@ -1,7 +1,9 @@
-﻿namespace DAL.DataBase.Models
+﻿using System;
+
+namespace DAL.DataBase.Models
 {
     public interface IEntity
     {
-        int Id { get; }
+        Guid Id { get; }
     }
 }

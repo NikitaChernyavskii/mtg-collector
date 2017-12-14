@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Core.CardSets.Contract;
 using Core.CardSets.Mapping;
@@ -21,10 +22,15 @@ namespace Core.CardSets.Services
 
         public void Add(CardSetModel model)
         {
-            _repository.Add(model.ToEntity());
+            CardSet entity = model.ToEntity();
+            if (entity.Id != Guid.Empty)
+            {
+                entity.Id = Guid.NewGuid();
+            }
+            _repository.Add(entity);
         }
 
-        public void Update(int id, CardSetModel model)
+        public void Update(Guid id, CardSetModel model)
         {
             CardSet cardSetEntity = _repository.Get().First(e => e.Id == id);
             cardSetEntity.Update(model);
@@ -32,7 +38,7 @@ namespace Core.CardSets.Services
             _repository.Update(cardSetEntity);
         }
 
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             _repository.Delete(id);
         }

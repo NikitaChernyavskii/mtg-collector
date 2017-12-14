@@ -14,6 +14,6 @@ namespace DAL.DataBase.Contract
 
         void Update(TEntity entity);
 
-        void Delete(int id);
+        void Delete(Guid id);
     }
 }

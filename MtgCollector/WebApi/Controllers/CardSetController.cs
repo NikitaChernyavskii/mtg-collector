@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using Core.CardSets.Contract;
@@ -32,14 +33,14 @@ namespace WebApi.Controllers
 
         [HttpPut]
         [Route("")]
-        public void Update(int id, CardSetModel model)
+        public void Update(Guid id, CardSetModel model)
         {
             CardSetService.Update(id, model);
         }
 
         [HttpDelete]
         [Route("")]
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             CardSetService.Delete(id);
         }

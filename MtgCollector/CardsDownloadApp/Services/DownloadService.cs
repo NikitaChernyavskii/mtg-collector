@@ -3,13 +3,11 @@ using System.IO;
 using System.Linq;
 using CardsDownloadApp.Models;
 using CardsDownloadApp.Models.MtgJson;
-using Core.CardSets.Services;
 using Newtonsoft.Json;
 using Core.CardSets.Contract;
-using Core.Cards.Services;
 using Core.Cards.Contract;
 using Core.CardSets.Models;
-using CardsDownloadApp.Mapping;
+using Core.Cards.Models;
 using Ninject;
 
 namespace CardsDownloadApp.Services
@@ -18,7 +16,10 @@ namespace CardsDownloadApp.Services
     {
         private readonly IKernel _kernel;
         private readonly ICardSetService _cardSetService;
-        private readonly ICardService _cardService = new CardService();
+        private readonly ICardService _cardService;
+        private readonly DownloadCardSetsService _downloadCardSetService = new DownloadCardSetsService();
+        private readonly DownloadCardsService _downloadCardsService = new DownloadCardsService();
+
         public DownloadService(IKernel kernel)
         {
             _kernel = kernel;
@@ -35,26 +36,17 @@ namespace CardsDownloadApp.Services
                 mtgJsonSets = JsonConvert.DeserializeObject<List<MtgJsonSet>>(json);
             }
 
-            var existedSets = new HashSet<string>(_cardSetService.Get().Select(s => s.Name.ToUpper()));
-            List<CardSetModel> setModels = new List<CardSetModel>();
-            foreach (var mtgJsonSet in mtgJsonSets)
-            {
-                if (existedSets.Contains(mtgJsonSet.Name.ToUpper()))
-                {
-                    continue;
-                }
-                setModels.Add(mtgJsonSet.ToModel());
-            }
-            AddCardSetsToDb(setModels);
-        }
+            List<CardSetView> existedCardSets = _cardSetService.Get();
+            Dictionary<string, CardSetView> existedCardSetsDictionaryByName = existedCardSets.ToDictionary(s => s.Name.ToUpper());
+            Dictionary<string, CardSetModel> newCardSetModelsDictionaryByName =
+                _downloadCardSetService.GetNewCardSetModelsDictionaryByName(mtgJsonSets, existedCardSetsDictionaryByName);
+            _downloadCardSetService.AddCardSetsToDb(newCardSetModelsDictionaryByName.Values, _cardSetService);
 
-        private void AddCardSetsToDb(List<CardSetModel> setModels)
-        {
-            // TODO: think about transaction to prevent creation of a lot of contexts
-            foreach(var setModel in setModels)
-            {
-                _cardSetService.Add(setModel);
-            }
+            List<CardView> existedCards = _cardService.Get();
+            Dictionary<string, CardView> existedCardsDictionaryByMtgJsonId = existedCards.ToDictionary(c => c.MtgJsonId);
+            List<CardModel> newCardModels = _downloadCardsService.GetNewCardModels(mtgJsonSets,
+                existedCardSetsDictionaryByName, newCardSetModelsDictionaryByName, existedCardsDictionaryByMtgJsonId);
+            _downloadCardsService.AddCardToDb(newCardModels, _cardService);
         }
     }
 }

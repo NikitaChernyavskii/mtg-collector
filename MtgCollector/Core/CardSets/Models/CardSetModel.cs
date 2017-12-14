@@ -1,7 +1,10 @@
-﻿namespace Core.CardSets.Models
+﻿using System;
+
+namespace Core.CardSets.Models
 {
     public class CardSetModel
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
         public string GathererCode { get; set; }

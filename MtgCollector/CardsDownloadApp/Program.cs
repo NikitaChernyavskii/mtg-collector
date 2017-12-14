@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CardsDownloadApp.Mapping;
 using CardsDownloadApp.Services;
 using Core.Infrastructure;
 using DAL.Infrastructure;
@@ -21,6 +22,7 @@ namespace CardsDownloadApp
             Mapper.Initialize(config =>
             {
                 CoreMappingRegisterService.Register(config);
+                DownloadMapping.Register(config);
             });
 
 

@@ -1,15 +1,16 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 
 namespace CardsDownloadApp.Models.MtgJson
 {
     public class MtgJsonCard
     {
-        public string Id { get; set; }
+        [JsonProperty(PropertyName = "Id")]
+        public string MtgJsonId { get; set; }
         public string Layout { get; set; }
         public string Name { get; set; }
         public string[] Names { get; set; }
         public string ManaCost { get; set; }
-        public float Cmc { get; set; }
+        public double Cmc { get; set; }
         public string[] Colors { get; set; }
         public string[] ColorIdentity { get; set; }
         public string Type { get; set; }

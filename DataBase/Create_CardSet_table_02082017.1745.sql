@@ -1,6 +1,6 @@
 CREATE TABLE dbo.CardSet 
 (
-	Id INT IDENTITY(1, 1) NOT NULL,
+	Id uniqueidentifier NOT NULL,
 	[Name] NVARCHAR(150) NOT NULL,
 	Code NVARCHAR(150) NULL,
 	GathererCode NVARCHAR(150) NULL,

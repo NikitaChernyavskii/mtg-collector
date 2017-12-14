@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Http;
 using Core.Cards.Contract;
 using Core.Cards.Models;
@@ -28,14 +29,14 @@ namespace WebApi.Controllers
 
         [HttpPut]
         [Route("")]
-        public void Update(int id, CardModel model)
+        public void Update(Guid id, CardModel model)
         {
             CardService.Update(id, model);
         }
 
         [HttpDelete]
         [Route("")]
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             CardService.Delete(id);
         }

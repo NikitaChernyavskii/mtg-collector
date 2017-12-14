@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DAL.DataBase.Models;
 
 namespace DAL.Entities
 {
     public class CardSet : IEntity
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
         public string GathererCode { get; set; }

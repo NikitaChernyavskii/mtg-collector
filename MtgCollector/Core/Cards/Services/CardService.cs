@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Core.Cards.Contract;
 using Core.Cards.Models;
 using DAL.DataBase.Contract;
@@ -28,10 +29,12 @@ namespace Core.Cards.Services
 
         public void Add(CardModel model)
         {
-            CardRepository.Add(model.ToEntity());
+            Card entity = model.ToEntity();
+            entity.Id = Guid.NewGuid();
+            CardRepository.Add(entity);
         }
 
-        public void Update(int id, CardModel model)
+        public void Update(Guid id, CardModel model)
         {
             Card entity = CardRepository.Get().First(e => e.Id == id);
             entity.Update(model);
@@ -39,7 +42,7 @@ namespace Core.Cards.Services
             CardRepository.Update(entity);
         }
 
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             CardRepository.Delete(id);
         }

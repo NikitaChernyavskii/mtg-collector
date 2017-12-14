@@ -43,7 +43,7 @@ namespace DAL.DataBase
             }
         }
 
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             using (var context = new MtgCollectorDbContext())
             {

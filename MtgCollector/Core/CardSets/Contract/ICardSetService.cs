@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Core.CardSets.Models;
 
 namespace Core.CardSets.Contract
@@ -9,8 +10,8 @@ namespace Core.CardSets.Contract
 
         void Add(CardSetModel model);
 
-        void Update(int id, CardSetModel model);
+        void Update(Guid id, CardSetModel model);
 
-        void Delete(int id);
+        void Delete(Guid id);
     }
 }
