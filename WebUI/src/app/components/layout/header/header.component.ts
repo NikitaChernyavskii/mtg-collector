@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
 
   loadCardSets(): void {
     this.cardSetService.getCardSets().subscribe(sets => {
-      this.cardSets = sets;
+      this.cardSets = sets.filter(s => !s.onlineOnly);
     });
   }
 }
