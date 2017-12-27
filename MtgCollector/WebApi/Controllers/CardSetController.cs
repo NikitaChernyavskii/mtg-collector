@@ -24,6 +24,13 @@ namespace WebApi.Controllers
             return cardSets;
         }
 
+        [HttpGet]
+        [Route("id/{id}")]
+        public CardSetView GetById(Guid id)
+        {
+            return CardSetService.GetById(id);
+        }
+
         [HttpPost]
         [Route("")]
         public void Add(CardSetModel model)

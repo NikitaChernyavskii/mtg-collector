@@ -18,7 +18,6 @@ D:\MTG collector\MtgCollector\DAL\bin\Debug\Ninject.dll
 D:\MTG collector\MtgCollector\DAL\bin\Debug\EntityFramework.xml
 D:\MTG collector\MtgCollector\DAL\bin\Debug\EntityFramework.SqlServer.xml
 D:\MTG collector\MtgCollector\DAL\bin\Debug\Ninject.xml
-D:\MTG collector\MtgCollector\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\MTG collector\MtgCollector\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\MTG collector\MtgCollector\DAL\obj\Debug\DAL.dll
 D:\MTG collector\MtgCollector\DAL\obj\Debug\DAL.pdb

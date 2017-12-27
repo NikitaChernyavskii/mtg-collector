@@ -1,5 +1,5 @@
 export class CardSetView {
-  public Id: string;
+  public id: string;
   public name: string;
   public code: string;
   public onlineOnly: boolean;

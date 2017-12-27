@@ -25,6 +25,21 @@ namespace DAL.DataBase
             }
         }
 
+        public List<TEntity> Get(Expression<Func<TEntity, bool>> filterExpr,
+            params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            using (var context = new MtgCollectorDbContext())
+            {
+                IQueryable<TEntity> entities = context.Set<TEntity>();
+                foreach (var includeProperty in includeProperties)
+                {
+                    entities = entities.Include(includeProperty);
+                }
+
+                return entities.Where(filterExpr).ToList();
+            }
+        }
+
         public void Add(TEntity entity)
         {
             using (var context = new MtgCollectorDbContext())

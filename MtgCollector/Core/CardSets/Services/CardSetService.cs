@@ -17,7 +17,17 @@ namespace Core.CardSets.Services
 
         public List<CardSetView> Get()
         {
-            return _repository.Get().ToList().Select(c => c.ToView()).ToList();
+            return _repository.Get().Select(c => c.ToView()).ToList();
+        }
+
+        public CardSetView GetById(Guid id)
+        {
+            CardSetView card = _repository
+                .Get(c => c.Id == id)
+                .Select(c => c.ToView())
+                .FirstOrDefault();
+
+            return card;
         }
 
         public void Add(CardSetModel model)

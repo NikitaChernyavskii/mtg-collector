@@ -27,6 +27,26 @@ namespace Core.Cards.Services
             return cards;
         }
 
+        public CardView GetById(Guid id)
+        {
+            CardView card = CardRepository
+                .Get(c => c.Id == id, c => c.CardSet)
+                .Select(c => c.ToView())
+                .FirstOrDefault();
+
+            return card;
+        }
+
+        public List<CardView> GetBySetId(Guid setId)
+        {
+            List<CardView> cards = CardRepository
+                .Get(c => c.CardSetId == setId)
+                .Select(c => c.ToView())
+                .ToList();
+
+            return cards;
+        }
+
         public void Add(CardModel model)
         {
             Card entity = model.ToEntity();

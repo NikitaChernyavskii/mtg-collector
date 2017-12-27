@@ -1,0 +1,10 @@
+<div class="card-set">
+  <div class="card-set-name">
+    {{cardSet?.name}}
+  </div>
+  <div *ngFor="let card of cards">
+    <div>
+      <img src="{{getCardImageUrl(card)}}">
+    </div>
+  </div>
+</div>

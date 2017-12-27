@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 import { CardSetView } from '../../../models';
 import { CardSetService } from '../../../services/card.set.service';
 
@@ -24,11 +23,13 @@ export class HeaderComponent implements OnInit {
   }
 
   homeClick(): void {
+    this.selectedCardSet = null;
     this.router.navigateByUrl('');
   }
 
   selectCardSetClick(cardSet: CardSetView) {
     this.selectedCardSet = cardSet;
+    this.router.navigate([`cardset/${cardSet.id}`]);
   }
 
   get getCardSetDropDownCurrentValue(): string {

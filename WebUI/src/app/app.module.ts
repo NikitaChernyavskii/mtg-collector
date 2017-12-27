@@ -9,6 +9,8 @@ import { MainComponent } from './components/layout/main/main.component';
 import { HomeComponent } from './components/home/home.component';
 import { RoutingModule } from './app.route';
 import { CardSetService } from './services/card.set.service';
+import { CardSetComponent } from './components/card.set/card.set.component';
+import { CardService } from './services/card.service';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { CardSetService } from './services/card.set.service';
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CardSetComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -24,7 +27,7 @@ import { CardSetService } from './services/card.set.service';
     RoutingModule,
     HttpModule
   ],
-  providers: [CardSetService],
+  providers: [CardSetService, CardService],
   bootstrap: [MainComponent]
 })
 export class AppModule { }

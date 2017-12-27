@@ -10,6 +10,9 @@ namespace DAL.DataBase.Contract
     {
         List<TEntity> Get(params Expression<Func<TEntity, object>>[] includeProperties);
 
+        List<TEntity> Get(Expression<Func<TEntity, bool>> filterExpr,
+            params Expression<Func<TEntity, object>>[] includeProperties);
+
         void Add(TEntity entity);
 
         void Update(TEntity entity);
