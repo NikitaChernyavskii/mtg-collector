@@ -1,7 +1,7 @@
 export class CardView {
   public Id: string;
   public mtgJsonId: string;
-  public CardSetId: number;
+  public cardSetId: number;
   public layout: string;
   public name: string;
   public names: string[];

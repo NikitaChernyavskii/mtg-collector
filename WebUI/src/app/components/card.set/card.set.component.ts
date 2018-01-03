@@ -54,4 +54,10 @@ export class CardSetComponent implements OnInit {
       this.cards = cards;
     });
   }
+
+
+  test(card: CardView): string {
+    debugger
+    return card.name;
+  }
 }

@@ -20,7 +20,7 @@ namespace Core.Cards.Models
         [JsonProperty("layout")]
         public string Layout { get; set; }
 
-        [JsonProperty("lame")]
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         [JsonProperty("names")]

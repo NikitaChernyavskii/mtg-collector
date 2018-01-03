@@ -33,3 +33,4 @@ D:\MTG collector\MtgCollector\Core\obj\Debug\Core.csprojResolveAssemblyReference
 D:\MTG collector\MtgCollector\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
 D:\MTG collector\MtgCollector\Core\obj\Debug\Core.dll
 D:\MTG collector\MtgCollector\Core\obj\Debug\Core.pdb
+E:\workspace\MTG collector\MtgCollector\Core\bin\Debug\Newtonsoft.Json.xml
