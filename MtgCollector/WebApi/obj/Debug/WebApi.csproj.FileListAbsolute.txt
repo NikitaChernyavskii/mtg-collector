@@ -127,3 +127,5 @@ D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.csprojResolveAssemblyRefer
 D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
 D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.dll
 D:\MTG collector\MtgCollector\WebApi\obj\Debug\WebApi.pdb
+D:\MTG collector\MtgCollector\WebApi\bin\AutoMapper.xml
+D:\MTG collector\MtgCollector\WebApi\bin\Newtonsoft.Json.xml

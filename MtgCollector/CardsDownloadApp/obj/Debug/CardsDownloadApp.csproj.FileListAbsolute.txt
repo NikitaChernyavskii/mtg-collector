@@ -96,3 +96,6 @@ D:\MTG collector\MtgCollector\CardsDownloadApp\obj\Debug\CardsDownloadApp.csproj
 D:\MTG collector\MtgCollector\CardsDownloadApp\obj\Debug\CardsDownloadApp.csproj.CoreCompileInputs.cache
 D:\MTG collector\MtgCollector\CardsDownloadApp\obj\Debug\CardsDownloadApp.exe
 D:\MTG collector\MtgCollector\CardsDownloadApp\obj\Debug\CardsDownloadApp.pdb
+D:\MTG collector\MtgCollector\CardsDownloadApp\bin\Debug\AutoMapper.xml
+D:\MTG collector\MtgCollector\CardsDownloadApp\bin\Debug\Newtonsoft.Json.xml
+D:\MTG collector\MtgCollector\CardsDownloadApp\bin\Debug\Ninject.xml
